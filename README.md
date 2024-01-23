@@ -40,4 +40,4 @@ CanvasLib is released under the [GPL-3.0 License](LICENSE).
 
 ## Credits
 
-- CanvasLib is developed and maintained by [raonyreis13].
+- CanvasLib is developed and maintained by [raonygamer](https://github.com/raonygamer).
