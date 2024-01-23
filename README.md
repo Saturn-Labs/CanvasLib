@@ -1,40 +1,43 @@
-# Mod Template
+# CanvasLib - UI Manipulation Tool Mod Library
 
-## Getting Started
+## Overview
 
-### Prerequisites
+CanvasLib is a powerful tool mod library designed for Minecraft Bedrock Edition (v1.14.60.5). This library provides essential functionalities for other mods to manipulate and enhance the user interface using the ZenovaAPI.
 
-* **[Visual Studio](https://visualstudio.microsoft.com/downloads/)** - **Make sure to select C++ support in the installer.**
-* **[VSNASM](https://github.com/ShiftMediaProject/VSNASM/)**
-* **[Python 3](https://www.python.org/downloads/)**
-* **[CMake](https://cmake.org/download/)** - ZenovaAPI currently only supports 64-bit
+## Features
 
-* **Python Packages** - `pip3 install pywin32`
+- **UI Manipulation:** CanvasLib allows other mods to easily manipulate and customize the game's user interface elements.
+- **Compatibility:** Designed to seamlessly integrate with ZenovaAPI, ensuring stability and optimal performance.
 
-## Changing the Mod Name
+## Installation
 
-**No spaces in the modname**
+1. **Download:**
+   - Obtain the CanvasLib library from the [Release Page](https://github.com/Saturn-Labs/CanvasLib/releases).
 
-In the files change Example to your modname
+2. **Installation:**
+   - Ensure you have ZenovaAPI installed.
+   - Place the CanvasLib library file into the "mods" folder within your Minecraft Bedrock Edition installation directory.
 
-**CMakeLists.txt**
-```
-set(ModName Example)
-```
-**resources/modinfo.json**
-```
-"nameId": "Example"
-```
+3. **Usage in Mods:**
+   - Other mods can use CanvasLib by including it as a dependency in their project.
+   - Refer to the [CanvasLib Wiki](https://github.com/Saturn-Labs/CanvasLib/wiki) for detailed documentation on using the library.
 
-## Building
+## Integration Guidelines
 
-1. Open the CMake GUI application
-2. Click on `Browse Source` and select the folder containing the repository
-3. Create a new folder for the build output in the repository folder
-4. Click on `Browse Build` and select your build folder
-5. Click on `Configure` and select `Visual Studio 20XX` as the generator
-6. Choose `x64` as the optional platform
-7. After the configuration process finishes, click on `Generate` to create the Visual Studio solution and project files in the build folder
-8. Open the solution file in Visual Studio. 
-9. Build the project under the `Build` menu and selecting `Build Solution`
-10. After the build is complete, the generated files will be placed in the mod folder located at `%zenova_data%/mods/`
+- Mods looking to utilize CanvasLib should follow the integration guidelines outlined in the [INTEGRATION_GUIDE.md](INTEGRATION_GUIDE.md) file in this repository.
+
+## Contributing
+
+We welcome contributions to CanvasLib. Follow the guidelines in the [CONTRIBUTING.md](CONTRIBUTING.md) file to get started.
+
+## Issues
+
+Report any issues or suggestions on the [GitHub Issues](https://github.com/Saturn-Labs/CanvasLib/issues) page.
+
+## License
+
+CanvasLib is released under the [GPL-3.0 License](LICENSE).
+
+## Credits
+
+- CanvasLib is developed and maintained by [raonyreis13].
