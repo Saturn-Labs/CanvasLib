@@ -1,7 +1,7 @@
 {
-    "nameId": "Example",
-    "name": "Template Name",
-    "description": "Template Description",
+    "nameId": "CanvasLib",
+    "name": "Canvas Library",
+    "description": "",
     "version": "1.0.0",
     "mcversion": [
         "1.14.60.5"

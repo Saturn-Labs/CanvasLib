@@ -1,24 +1,6 @@
 {
-    "version": [],
-
-    "vtable": [
-        {
-            "name": "",
-            "address": [],
-            "functions": []
-        }
-    ],
-
+    "vtable": [],
     "includes": [],
-
-    "variables": {
-        "": []
-    },
-
-    "functions": [
-        {
-            "name": "",
-            "address": []
-        }
-    ]
+    "variables": {},
+    "functions": []
 }
