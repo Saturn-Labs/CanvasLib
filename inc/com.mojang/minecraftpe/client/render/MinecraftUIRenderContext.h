@@ -4,6 +4,7 @@
 #include "com.mojang/minecraftpe/client/screen/scene/UIScene.h"
 #include "com.mojang/minecraftpe/math/Color.h"
 #include "com.mojang/minecraftpe/math/RectangleArea.h"
+#include "CanvasLib/Minecraft/TexturePtr.h"
 
 class IClientInstance;
 class ScreenContext;
@@ -24,7 +25,7 @@ namespace Minecraft
         virtual void drawDebugText(const RectangleArea&, const std::string&, const mce::Color&, float, ui::TextAlignment, const TextMeasureData&, const CaretMeasureData&);
         virtual void drawText(Font&, const RectangleArea&, const std::string&, const mce::Color&, float, ui::TextAlignment, const TextMeasureData&, const CaretMeasureData&);
         virtual void flushText(float);
-        virtual void drawImage(const mce::TexturePtr&, const glm::tvec2<float, (glm::precision)0>&, const glm::tvec2<float, (glm::precision)0>&, const glm::tvec2<float, (glm::precision)0>&, const glm::tvec2<float, (glm::precision)0>&);
+        virtual void drawImage(const mce::TexturePtr&, const glm::tvec2<float, (glm::precision)0>&, const glm::tvec2<float, (glm::precision)0>&, const glm::tvec2<float, (glm::precision)0>&, const glm::tvec2<float, (glm::precision)0>&, int32_t);
         virtual void drawNineslice(const mce::TexturePtr&, const NinesliceInfo&);
         virtual void flushImages(const mce::Color&, float, const HashedString&);
         virtual void beginSharedMeshBatch(ComponentRenderBatch&);
@@ -46,7 +47,7 @@ namespace Minecraft
         virtual void renderCustom(CustomRenderComponent*, int, RectangleArea&);
         virtual void cleanup();
         virtual void removePersistentMeshes();
-        virtual std::shared_ptr<mce::TexturePtr> getTexture(const ResourceLocation&, bool);
+        virtual mce::TexturePtr getTexture(const ResourceLocation& location, bool) = 0;
         virtual void getZippedTexture(const Core::Path&, const ResourceLocation&, bool);
         virtual void unloadTexture(const mce::TexturePtr&);
         virtual void getUITextureInfo(const ResourceLocation&, bool);

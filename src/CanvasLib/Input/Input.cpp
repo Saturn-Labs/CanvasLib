@@ -7,16 +7,16 @@
 
 namespace CanvasLib
 {
-    Vector2 Input::ScreenMousePosition;
-    Vector2 Input::UIMousePosition;
+    FVector2 Input::ScreenMousePosition;
+    FVector2 Input::UIMousePosition;
     
     void Input::PointerLocationEvent(const Minecraft::PointerLocationEventData& data, Minecraft::FocusImpact impact,
         Minecraft::ClientInstance& clientInstance)
     {
         const Minecraft::ScreenSizeData& screenSizeData = clientInstance.getGuiData().mScreenSizeData;
         
-        ScreenMousePosition = Vector2(data.PointerX, data.PointerY);
-        UIMousePosition = Vector2(ScreenMousePosition.x * (screenSizeData.mClientUIScreenSize.x / screenSizeData.mClientScreenSize.x), ScreenMousePosition.y * (screenSizeData.mClientUIScreenSize.y / screenSizeData.mClientScreenSize.y));
+        ScreenMousePosition = FVector2(data.PointerX, data.PointerY);
+        UIMousePosition = FVector2(ScreenMousePosition.x * (screenSizeData.mClientUIScreenSize.x / screenSizeData.mClientScreenSize.x), ScreenMousePosition.y * (screenSizeData.mClientUIScreenSize.y / screenSizeData.mClientScreenSize.y));
     }
 
     void Input::PointerDownEvent(Minecraft::FocusImpact impact, Minecraft::ClientInstance& clientInstance)

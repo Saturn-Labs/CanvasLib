@@ -1,6 +1,6 @@
 #pragma once
 #include "../Exporting.h"
-#include "../Common/Vector2.h"
+#include "../Common/FVector2.h"
 
 namespace Minecraft
 {
@@ -14,8 +14,8 @@ namespace CanvasLib
     class LIBRARY Input
     {
     public:
-        static Vector2 ScreenMousePosition;
-        static Vector2 UIMousePosition;
+        static FVector2 ScreenMousePosition;
+        static FVector2 UIMousePosition;
 
     public:
         static void PointerLocationEvent(const Minecraft::PointerLocationEventData& data, Minecraft::FocusImpact impact, Minecraft::ClientInstance& clientInstance);

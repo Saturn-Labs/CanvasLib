@@ -6,8 +6,8 @@
 #include "CanvasLib/Input/Input.h"
 #include "com.mojang/minecraftpe/client/input/MinecraftInputHandler.h"
 #include "com.mojang/minecraftpe/client/screen/scene/UIScene.h"
-#include "com.mojang/minecraftpe/common/ResourceLocation.h"
-#include "com.mojang/minecraftpe/common/TexturePtr.h"
+#include "CanvasLib/Minecraft/ResourceLocation.h"
+#include "CanvasLib/Minecraft/TexturePtr.h"
 #include "com.mojang/minecraftpe/math/Color.h"
 #include "com.mojang/minecraftpe/client/input/event/ButtonEventData.h"
 

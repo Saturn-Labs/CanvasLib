@@ -1,6 +1,6 @@
 ﻿#pragma once
 #include "com.mojang/minecraftpe/common/HashedString.h"
-#include "com.mojang/minecraftpe/common/ResourceLocation.h"
+#include "CanvasLib/Minecraft/ResourceLocation.h"
 #include "glm/vec2.hpp"
 #include <memory>
 
@@ -57,7 +57,7 @@ namespace Minecraft
         virtual void drawDebugText(const RectangleArea&, const std::string&, const mce::Color&, float, ui::TextAlignment, const TextMeasureData&, const CaretMeasureData&) = 0;
         virtual void drawText(Font&, const RectangleArea&, const std::string&, const mce::Color&, float, ui::TextAlignment, const TextMeasureData&, const CaretMeasureData&) = 0;
         virtual void flushText(float) = 0;
-        virtual void drawImage(const mce::TexturePtr& texture, const glm::tvec2<float, (glm::precision)0>& position, const glm::tvec2<float, (glm::precision)0>& size, const glm::tvec2<float, (glm::precision)0>& uvPos, const glm::tvec2<float, (glm::precision)0>& uvSize) = 0;
+        virtual void drawImage(const mce::TexturePtr& texture, const glm::vec2& position, const glm::vec2& size, const glm::vec2& uvPos, const glm::vec2& uvSize, int32_t) = 0;
         virtual void drawNineslice(const mce::TexturePtr&, const NinesliceInfo&) = 0;
         virtual void flushImages(const mce::Color&, float, const HashedString&) = 0;
         virtual void beginSharedMeshBatch(ComponentRenderBatch&) = 0;
@@ -79,7 +79,7 @@ namespace Minecraft
         virtual void renderCustom(CustomRenderComponent*, int, RectangleArea&) = 0;
         virtual void cleanup() = 0;
         virtual void removePersistentMeshes() = 0;
-        virtual std::shared_ptr<mce::TexturePtr> getTexture(const ResourceLocation&, bool) = 0;
+        virtual mce::TexturePtr getTexture(const ResourceLocation& location, bool) = 0;
         virtual void getZippedTexture(const Core::Path&, const ResourceLocation&, bool) = 0;
         virtual void unloadTexture(const mce::TexturePtr&) = 0;
         virtual void getUITextureInfo(const ResourceLocation&, bool) = 0;

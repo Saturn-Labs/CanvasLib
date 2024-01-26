@@ -1,5 +1,4 @@
 ﻿#pragma once
-
 #include <string>
 
 typedef uint64_t HashType64;
@@ -20,13 +19,16 @@ class ResourceLocation {
 public:
     ResourceFileSystem mFileSystem;
 private:
-    std::string mPath; // Core::HeapPathBuffer
-    HashType64 mPathHash;
-    size_t mFullHash;
+    std::string mPath;
+    uint64_t mPathHash;
+    uint64_t mFullHash;
 
 public:
     ResourceLocation() {};
     ResourceLocation(const std::string& path)
-        : mFileSystem(ResourceFileSystem::InUserPackage), mPath(path) {}
+        : mFileSystem(ResourceFileSystem::InUserPackage), mPath(path)
+    {
+        
+    }
 };
     
