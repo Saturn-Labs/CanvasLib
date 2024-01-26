@@ -32,6 +32,8 @@ if(NOT EXISTS ${generated_directory})
     file(TOUCH "${generated_directory}/initcpp.h")
 endif()
 
+add_compile_definitions(CANVAS_LIB)
+
 include_directories(
     "$ENV{ZENOVA_DATA}/dev/inc"
     "${IncludeDir}"
@@ -79,6 +81,15 @@ add_custom_command(TARGET ${ModName}
     ${CMAKE_SOURCE_DIR}/resources
     $ENV{ZENOVA_DATA}/mods/${ModName}
     COMMENT "Resources copied to $ENV{ZENOVA_DATA}/mods/${ModName}"
+)
+
+# copy the include headers to the mod folder
+add_custom_command(TARGET ${ModName}
+    POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    ${CMAKE_SOURCE_DIR}/inc/CanvasLib
+    $ENV{ZENOVA_DATA}/mods/${ModName}/include
+    COMMENT "Headers copied to $ENV{ZENOVA_DATA}/mods/${ModName}/include"
 )
 
 source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR}/${IncludeDir} PREFIX "Header Files//" FILES ${INCLUDE_LIST})

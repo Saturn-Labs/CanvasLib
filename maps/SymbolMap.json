@@ -1,6 +1,83 @@
 {
-    "vtable": [],
+    "vtable": [
+        {
+            "name": "UIScene",
+            "address": "0x2AB47B8",
+            "functions": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "?handlePointerLocation@UIScene@Minecraft@@UEAA_JAEBVPointerLocationEventData@2@W4FocusImpact@2@@Z"
+            ]
+        },
+        {
+            "name": "MinecraftInputHandler",
+            "address": "0x2AB90E0",
+            "functions": [
+                "",
+                "",
+                "?_registerInputHandlers@MinecraftInputHandler@Minecraft@@UEAAXXZ",
+                "",
+                ""
+            ]
+        }
+    ],
     "includes": [],
     "variables": {},
-    "functions": []
+    "functions": [
+        {
+            "name": "?setupAndRender@ScreenView@Minecraft@@QEAAXAEAVUIRenderContext@2@@Z",
+            "address": "0x07235A0"
+        },
+        {
+            "name": "??1TexturePtr@mce@@QEAA@XZ",
+            "address": "0x0DDF360"
+        },
+        {
+            "name": "?registerPointerLocationHandler@InputHandler@Minecraft@@QEAAXV?$function@$$A6AXAEBUPointerLocationEventData@Minecraft@@W4FocusImpact@2@AEAVClientInstance@2@@Z@std@@@Z",
+            "address": "0x1959BD0"
+        },
+        {
+            "name": "?registerButtonDownHandler@InputHandler@Minecraft@@QEAAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$function@$$A6AXW4FocusImpact@Minecraft@@AEAVClientInstance@2@@Z@4@_N@Z",
+            "address": "0x19597B0"
+        },
+        {
+            "name": "?registerButtonUpHandler@InputHandler@Minecraft@@QEAAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$function@$$A6AXW4FocusImpact@Minecraft@@AEAVClientInstance@2@@Z@4@_N@Z",
+            "address": "0x1959900"
+        },
+        {
+            "name": "?_handleButtonEvent@InputHandler@Minecraft@@QEAAXAEBUButtonEventData@2@W4FocusImpact@2@AEAVClientInstance@2@H@Z",
+            "address": "0x195AFA0"
+        },
+        {
+            "name": "?tick@InputHandler@Minecraft@@QEAAXAEAVMinecraftGame@2@AEAVClientInstance@2@AEAVControllerIDtoClientMap@2@H@Z",
+            "address": "0x1958C10"
+        }
+    ]
 }
